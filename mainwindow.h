@@ -65,17 +65,17 @@ private:
     void 	requestWriteMask(ushort number);
 	
 	//-----------------Управляющие флаги--------------------
-    StatusOfRequest 				m_currentStatusOfRequest = None;
-    PorposeOfWrittingRegisterAdrRz1 m_writtingRegisterAdrRz1 = DontUseAdrRz1;
-    AvalibleInfoInGui 				m_takeInfoFromGui = DontUseInfo;
+    StatusOfRequest 			m_currentStatusOfRequest = None;
+    PorposeOfWrittingRegisterAdrRz1 	m_writtingRegisterAdrRz1 = DontUseAdrRz1;
+    AvalibleInfoInGui 			m_takeInfoFromGui = DontUseInfo;
 
 	//-----------------Переменные для общения ПК с прибором-
-    QTimer  *m_timerWaitForReply = nullptr;
-    uchar    m_currentAdress = 0;
-    Port    *m_portCommunication = nullptr;
+    QTimer  	*m_timerWaitForReply = nullptr;
+    uchar    	 m_currentAdress = 0;
+    Port    	*m_portCommunication = nullptr;
 
 	//-----------------Дополнительные функции---------------
-    QString  converterDecToHex(ushort data);
+    QString  	 converterDecToHex(ushort data);
     ushort 	 takeInfoFromGui(AvalibleInfoInGui currentInfoNeedToTake);
 };
 
