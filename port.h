@@ -33,7 +33,7 @@ public slots:
     void 	   writeToPort(QByteArray send_modb);
     void 	   writeToPortString(QString send_modb);
     void 	   connectPort(QString name, int baudRate, QSerialPort::DataBits dataBits, QSerialPort::Parity parity, 
-							   QSerialPort::StopBits stopBits, QSerialPort::FlowControl flowControl);
+			       QSerialPort::StopBits stopBits, QSerialPort::FlowControl flowControl);
 
 private:
 
