@@ -24,24 +24,24 @@ public:
     ~Port();
 
 signals:
-    void 		   sendReceivedData (const QByteArray &data);
+    void 	   sendReceivedData (const QByteArray &data);
 
 public slots:
 
-    void 		   readInPort();
-    void 		   writeSettingsPort(QString, int, int, int, int, int);
-    void 		   connectPort(QString name, int baudRate, QSerialPort::DataBits dataBits, QSerialPort::Parity parity, 
+    void 	   readInPort();
+    void 	   writeSettingsPort(QString, int, int, int, int, int);
+    void 	   writeToPort(QByteArray send_modb);
+    void 	   writeToPortString(QString send_modb);
+    void 	   connectPort(QString name, int baudRate, QSerialPort::DataBits dataBits, QSerialPort::Parity parity, 
 							   QSerialPort::StopBits stopBits, QSerialPort::FlowControl flowControl);
-    void 		   writeToPort(QByteArray send_modb);
-    void 		   writeToPortString(QString send_modb);
 
 private:
 
     QSerialPort   *m_serialPort;
     Settings 	   m_settingsPort;
-    void 		   convHex(QByteArray *data, QString str);
+    void 	   convHex(QByteArray *data, QString str);
     unsigned short calcCrcModbus (const QByteArray &data);
-    bool 		   isReceivedDataCorrect(QByteArray data);
+    bool 	   isReceivedDataCorrect(QByteArray data);
 };
 
 #endif // PORT_H
