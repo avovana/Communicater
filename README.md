@@ -5,7 +5,7 @@ This software is a communication tool between embedded system and PC.
 2. user-friendly interface with modules:
    1. **table** to display and change calibration data from the device;
    2. **data reading feature** to read from(and write to) the file;
-   3. **graph module** showing on-line sensors values with the scale options.
+   3. **graph module** showing sensors values on-line with the scale options.
 
 Not all of the listed features is shown in the code.
 
